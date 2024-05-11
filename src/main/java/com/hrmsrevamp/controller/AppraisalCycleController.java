@@ -1,7 +1,7 @@
 package com.hrmsrevamp.controller;
 
 
-import com.hrmsrevamp.constants.MessageEnum;
+import com.hrmsrevamp.constant.MessageEnum;
 import com.hrmsrevamp.model.CustomResponse;
 
 @org.springframework.web.bind.annotation.RestController

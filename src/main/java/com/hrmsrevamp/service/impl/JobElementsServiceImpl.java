@@ -1,7 +1,10 @@
 package com.hrmsrevamp.service.impl;
 
+import com.hrmsrevamp.entity.Role;
 import com.hrmsrevamp.entity.User;
 import com.hrmsrevamp.model.CustomResponse;
+
+import java.util.List;
 
 @org.springframework.stereotype.Service
 public class JobElementsServiceImpl implements com.hrmsrevamp.service.JobElementsService {
@@ -14,7 +17,7 @@ public class JobElementsServiceImpl implements com.hrmsrevamp.service.JobElement
     @Override
     public CustomResponse addJobElements(com.hrmsrevamp.model.JobElementsModel jobElementsModel) {
         User loggedInUser = LoggedInUser.getCurrentUser();
-        String role = loggedInUser.getRole();
+        List<Role> roles = loggedInUser.getRoles();
         //switch (loggedInUser);
         return null;
     }
