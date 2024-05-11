@@ -14,7 +14,7 @@ public class JobElementsServiceImpl implements com.hrmsrevamp.service.JobElement
     @Override
     public CustomResponse addJobElements(com.hrmsrevamp.model.JobElementsModel jobElementsModel) {
         User loggedInUser = LoggedInUser.getCurrentUser();
-        String role = loggedInUser.getRole();
+//        String role = loggedInUser.getRole();
         //switch (loggedInUser);
         return null;
     }

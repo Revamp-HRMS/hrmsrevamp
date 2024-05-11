@@ -18,7 +18,7 @@ public class UserController {
   @Autowired private UserService userService;
 
   @GetMapping("/{role}")
-  public ResponseEntity<List<User>> getAllUser(@PathVariable String role){
+  public ResponseEntity<com.hrmsrevamp.model.CustomResponse> getAllUser(@PathVariable String role){
      return ResponseEntity.ok(userService.getAllUser(role));
   }
 }

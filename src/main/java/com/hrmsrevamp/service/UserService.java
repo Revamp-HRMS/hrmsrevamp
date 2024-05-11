@@ -8,5 +8,5 @@ import java.util.List;
 @Service
 public interface UserService {
 
-  List<User> getAllUser(String role);
+  com.hrmsrevamp.model.CustomResponse getAllUser(String role);
 }

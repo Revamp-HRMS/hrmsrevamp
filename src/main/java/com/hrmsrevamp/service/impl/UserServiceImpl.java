@@ -15,7 +15,15 @@ public class UserServiceImpl implements UserService {
   private UserRepository userRepository;
 
   @Override
-  public List<User> getAllUser(String role) {
-    return userRepository.findAll();
+  public com.hrmsrevamp.model.CustomResponse getAllUser(String role) {
+    java.util.List<com.hrmsrevamp.model.UserModel> userModels = userRepository.findByRoles_Name(role)
+        .stream().map(user -> com.hrmsrevamp.model.UserModel.builder()
+            .email(user.getEmail())
+            .id(user.getId())
+            .role(role)
+            .fullName(user.getFullName()).build()).toList();
+
+    return com.hrmsrevamp.model.CustomResponse.setAndGetCustomResponse(true,
+        String.valueOf(com.hrmsrevamp.constant.MessageEnum.DATA_RETRIEVED), userModels);
   }
 }
