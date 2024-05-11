@@ -13,7 +13,7 @@ import java.util.Optional;
  */
 
 @Repository
-@EnableJpaRepositories
+//@EnableJpaRepositories
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByEmailAndStatusNot(String email, String status);
 

@@ -1,6 +1,7 @@
 package com.hrmsrevamp.controller;
 
 
+import com.hrmsrevamp.constant.MessageEnum;
 import com.hrmsrevamp.model.CustomResponse;
 
 @org.springframework.web.bind.annotation.RestController
@@ -18,7 +19,7 @@ public class AppraisalCycleController {
         } catch (Exception e) {
             return org.springframework.http.ResponseEntity.status(
                     org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(CustomResponse.setAndGetCustomResponse(false, com.hrmsrevamp.constant.MessageEnum.DATABASE_ERROR.name(), null));
+                    .body(CustomResponse.setAndGetCustomResponse(false, MessageEnum.DATABASE_ERROR.name(), null));
         }
     }
 
@@ -30,7 +31,7 @@ public class AppraisalCycleController {
         } catch (Exception e) {
             return org.springframework.http.ResponseEntity.status(
                     org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(CustomResponse.setAndGetCustomResponse(false, com.hrmsrevamp.constant.MessageEnum.DATABASE_ERROR.name(), null));
+                    .body(CustomResponse.setAndGetCustomResponse(false, MessageEnum.DATABASE_ERROR.name(), null));
         }
     }
 
@@ -42,7 +43,7 @@ public class AppraisalCycleController {
         } catch (Exception e) {
             return org.springframework.http.ResponseEntity.status(
                     org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body(CustomResponse.setAndGetCustomResponse(false, com.hrmsrevamp.constant.MessageEnum.DATABASE_ERROR.name(), null));
+                    .body(CustomResponse.setAndGetCustomResponse(false, MessageEnum.DATABASE_ERROR.name(), null));
         }
     }
 
