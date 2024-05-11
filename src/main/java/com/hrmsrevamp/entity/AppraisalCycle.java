@@ -26,6 +26,6 @@ public class AppraisalCycle {
   private String designation;
   private String reportingManager;
   private String reviewingManager;
-  private Date appraisalCycle; //1 March 2024 // 2024-04-10
+  private String appraisalCycle; //1 March 2024 // 2024-04-10
   private String status;
 }
