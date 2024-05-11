@@ -1,22 +1,24 @@
 package com.hrmsrevamp.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.*;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.Accessors;
 
 import java.sql.Date;
 
-@Setter
-@Getter
+@Data
 @Entity
+@Table(name = "appraisal_cycle")
+@Accessors(chain = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class AppraisalCycle {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "APPRAISAL_CYCLE_SEQ")
+  @SequenceGenerator(name = "APPRAISAL_CYCLE_SEQ", sequenceName = "APPRAISAL_CYCLE_SEQ", initialValue = 1, allocationSize = 1)
   private Long Id;
   private Long userId;
   private String name;

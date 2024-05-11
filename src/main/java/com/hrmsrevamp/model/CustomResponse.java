@@ -1,10 +1,12 @@
 package com.hrmsrevamp.model;
 
-@lombok.Getter
-@lombok.Setter
-@lombok.Builder
-@lombok.AllArgsConstructor
-@lombok.NoArgsConstructor
+import lombok.*;
+
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class CustomResponse {
   private String message;
   private Boolean success;
