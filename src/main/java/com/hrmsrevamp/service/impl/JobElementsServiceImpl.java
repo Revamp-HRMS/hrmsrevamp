@@ -49,16 +49,16 @@ public class JobElementsServiceImpl implements com.hrmsrevamp.service.JobElement
         User loggedInUser = LoggedInUser.getCurrentUser();
         RatingAndComments ratingAndComments = new RatingAndComments();
         JobElements jobElements = new JobElements();
-        if (loggedInUser.getRoles().stream().allMatch(role -> role.equals(RoleEnum.EMPLOYEE))) {
+        if (loggedInUser.getRoles().stream().allMatch(role -> role.getName().equals(RoleEnum.EMPLOYEE.name()))) {
             ratingAndComments.setSelfAssessment(jobElementsModel.getSelfAssessment());
             ratingAndComments.setEmployeeComments(jobElementsModel.getEmployeeComments());
-        } else if (loggedInUser.getRoles().stream().allMatch(role -> role.equals(RoleEnum.MANAGER))) {
+        } else if (loggedInUser.getRoles().stream().allMatch(role -> role.getName().equals(RoleEnum.MANAGER.name()))) {
             ratingAndComments.setProjectLeader(jobElementsModel.getProjectLeader());
             ratingAndComments.setProjectManagerComments(jobElementsModel.getProjectManagerComments());
-        } else if (loggedInUser.getRoles().stream().allMatch(role -> role.equals(RoleEnum.MENTOR))) {
+        } else if (loggedInUser.getRoles().stream().allMatch(role -> role.getName().equals(RoleEnum.MENTOR.name()))) {
             ratingAndComments.setMentor(jobElementsModel.getMentor());
             ratingAndComments.setMentorComments(jobElementsModel.getMentorComments());
-        } else if (loggedInUser.getRoles().stream().allMatch(role -> role.equals(RoleEnum.ADMIN))) {
+        } else if (loggedInUser.getRoles().stream().allMatch(role -> role.getName().equals(RoleEnum.ADMIN.name()))) {
             ratingAndComments.setSelfAssessment(jobElementsModel.getSelfAssessment());
             ratingAndComments.setEmployeeComments(jobElementsModel.getEmployeeComments());
             ratingAndComments.setProjectLeader(jobElementsModel.getProjectLeader());
