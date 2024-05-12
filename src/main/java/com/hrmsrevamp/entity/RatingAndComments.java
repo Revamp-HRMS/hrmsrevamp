@@ -1,16 +1,23 @@
 package com.hrmsrevamp.entity;
 
 
-import jakarta.persistence.OneToOne;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
+import lombok.experimental.Accessors;
 
-@Getter
-@Setter
+@Data
+@Entity
+@Table(name = "rating_and_comments")
+@Accessors(chain = true)
+@NoArgsConstructor
+@AllArgsConstructor
 public class RatingAndComments {
-
-  @OneToOne
-  private Long jobElementsId;
+  @Id
+  @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "RATING_AND_COMMENTS_CYCLE_SEQ")
+  @SequenceGenerator(name = "RATING_AND_COMMENTS_CYCLE_SEQ", sequenceName = "RATING_AND_COMMENTS_CYCLE_SEQ", initialValue = 1, allocationSize = 1)
+  private Long id;
+  private Long appraisalId;
+  private String jobElement;
   private String selfAssessment;
   private String projectLeader;
   private String mentor;

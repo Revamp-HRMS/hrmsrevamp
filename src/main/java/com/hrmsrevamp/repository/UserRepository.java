@@ -11,7 +11,6 @@ import java.util.Optional;
 /**
  * User Repository.
  */
-
 @Repository
 //@EnableJpaRepositories
 public interface UserRepository extends JpaRepository<User, Long> {

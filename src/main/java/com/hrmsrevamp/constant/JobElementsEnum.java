@@ -1,6 +1,6 @@
 package com.hrmsrevamp.constant;
 
-public enum JobElements {
+public enum JobElementsEnum {
   JOB_KNOWLEDGE,
   WORK_QUALITY,
   INITIATIVE,

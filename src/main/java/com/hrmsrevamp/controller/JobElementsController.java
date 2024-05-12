@@ -1,31 +1,37 @@
 package com.hrmsrevamp.controller;
 
 import com.hrmsrevamp.model.CustomResponse;
+import com.hrmsrevamp.service.JobElementsService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import com.hrmsrevamp.model.JobElementsModel;
+import org.springframework.http.HttpStatus;
 
-@org.springframework.web.bind.annotation.RestController
-@org.springframework.web.bind.annotation.RequestMapping("/api/job-elements")
+@RestController
+@RequestMapping("/api/job-elements")
 public class JobElementsController {
 
-  @org.springframework.beans.factory.annotation.Autowired
-  private com.hrmsrevamp.service.JobElementsService jobElementsService;
+    @Autowired
+    private JobElementsService jobElementsService;
 
-  @org.springframework.web.bind.annotation.PostMapping("/add")
-  public org.springframework.http.ResponseEntity<CustomResponse> addJobElements(@org.springframework.web.bind.annotation.RequestBody com.hrmsrevamp.model.JobElementsModel jobElementsModel) {
-    CustomResponse customResponse = jobElementsService.addJobElements(jobElementsModel);
-    return new org.springframework.http.ResponseEntity<>(customResponse, org.springframework.http.HttpStatus.OK);
-  }
+    @PostMapping("/add")
+    public ResponseEntity<CustomResponse> addJobElements(@RequestBody JobElementsModel jobElementsModel) {
+        CustomResponse customResponse = jobElementsService.addJobElements(jobElementsModel);
+        return new ResponseEntity<>(customResponse, HttpStatus.OK);
+    }
 
-  @org.springframework.web.bind.annotation.PutMapping("/update/{id}")
-  public org.springframework.http.ResponseEntity<CustomResponse> updateJobElements(@org.springframework.web.bind.annotation.PathVariable("id") Long jobElementsId,
-                                                          @org.springframework.web.bind.annotation.RequestBody com.hrmsrevamp.model.JobElementsModel jobElementsModel) {
-    CustomResponse customResponse = jobElementsService.updateJobElementsById(jobElementsId, jobElementsModel);
-    return new org.springframework.http.ResponseEntity<>(customResponse, org.springframework.http.HttpStatus.OK);
-  }
+    @PutMapping("/update/{id}")
+    public ResponseEntity<CustomResponse> updateJobElements(@PathVariable("id") Long jobElementsId,
+                                                                                     @RequestBody JobElementsModel jobElementsModel) {
+        CustomResponse customResponse = jobElementsService.updateJobElementsById(jobElementsId, jobElementsModel);
+        return new ResponseEntity<>(customResponse, HttpStatus.OK);
+    }
 
-  @org.springframework.web.bind.annotation.GetMapping("/{id}")
-  public org.springframework.http.ResponseEntity<CustomResponse> getJobElements(@org.springframework.web.bind.annotation.PathVariable("id") Long jobElementsId) {
-    CustomResponse customResponse = jobElementsService.getJobElementsById(jobElementsId);
-    return new org.springframework.http.ResponseEntity<>(customResponse, org.springframework.http.HttpStatus.OK);
-  }
-  
+    @GetMapping("/{id}")
+    public ResponseEntity<CustomResponse> getJobElements(@PathVariable("id") Long jobElementsId) {
+        CustomResponse customResponse = jobElementsService.getJobElementsById(jobElementsId);
+        return new ResponseEntity<>(customResponse, HttpStatus.OK);
+    }
+
 }

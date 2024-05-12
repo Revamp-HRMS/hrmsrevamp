@@ -19,7 +19,7 @@ public class AppraisalCycle {
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "APPRAISAL_CYCLE_SEQ")
   @SequenceGenerator(name = "APPRAISAL_CYCLE_SEQ", sequenceName = "APPRAISAL_CYCLE_SEQ", initialValue = 1, allocationSize = 1)
-  private Long Id;
+  private Long id;
   private Long userId;
   private String name;
   private String employeeCode;
