@@ -26,15 +26,3 @@ We're implementing a Java Spring Boot application to create a centralized digita
 - Submitted appraisal forms are instantly accessible to designated managers for review.
 - Managers can thoroughly evaluate employee performance based on the provided self-assessment and additional performance metrics.
 
-### 4. Rating Submission:
-- Managers can provide ratings and constructive feedback on different performance parameters directly within the portal.
-- The system ensures that ratings and feedback are securely recorded and associated with the respective employee.
-
-### 5. HR Approval:
-- After the manager submits their ratings and feedback, the appraisal form is automatically forwarded to the HR department for final approval.
-- HR personnel can review the submitted evaluations and ensure consistency and fairness across the organization.
-
-
-
-## Acknowledgments:
-We extend our gratitude to the Java Spring Boot community for their invaluable resources and support that contributed to the development of this project.
