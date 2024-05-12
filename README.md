@@ -1,7 +1,7 @@
 # hrms-revamp-v1
 
 ## Introduction:
-The Appraisal Portal is a Java Spring Boot application designed to digitize and streamline the employee performance appraisal process within the organization. This portal provides a centralized platform for employees to submit self-appraisals and for managers to review, evaluate, and provide feedback, facilitating a more efficient and transparent appraisal workflow.
+The Appraisal Portal, built on Java Spring Boot, digitizes and streamlines the performance appraisal process. It offers employees a centralized platform for self-appraisal submission and enables managers to review, evaluate, and provide feedback efficiently.
 
 ## Problem Statement:
 The current manual appraisal process involves employees self-assessing their performance, which is then evaluated by managers or mentors. This approach is labor-intensive, lacks transparency, and hinders effective performance assessment.
