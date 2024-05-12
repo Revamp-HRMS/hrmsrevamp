@@ -19,14 +19,11 @@ We're implementing a Java Spring Boot application to create a centralized digita
 - Secure login functionality for both employees and managers ensures data privacy and access control.
 
 ### 2. Digital Appraisal Form:
-- Employees can conveniently access the digital appraisal form through the portal.
-- The form encompasses comprehensive sections covering various aspects of performance evaluation, including achievements, challenges, goals, and self-assessment.
+- The portal provides employees easy access to a comprehensive digital appraisal form covering achievements, challenges, goals, and self-assessment.
 
 ### 3. Manager Review:
-- Submitted appraisal forms are instantly accessible to designated managers for review.
-- Managers can thoroughly evaluate employee performance based on the provided self-assessment and additional performance metrics.
+- Submitted appraisal forms are instantly accessible to designated managers for thorough evaluation, including self-assessment and additional performance metrics.
 
 ### 4. Rating Submission:
-- Managers can provide ratings and constructive feedback on different performance parameters directly within the portal.
-- The system ensures that ratings and feedback are securely recorded and associated with the respective employee.
+- Managers can provide ratings and constructive feedback on various performance parameters directly within the portal, securely recorded and associated with the respective employee.
 
